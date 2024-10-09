@@ -17,7 +17,16 @@ public class B_HashtagExtractor {
 
     public void extractHashtags(String post) {
         /* TODO: your code goes here */
+        int hashIndex = post.indexOf("#");
+        while(hashIndex != -1) { // as long as another hashtag can be found keep looping
+            int spaceIndex = post.indexOf(" ", hashIndex);
+            if(spaceIndex == -1) {
+                spaceIndex = post.length(); // if theirs no space go to end of string
+            }
+            System.out.println("Hashtag: " + post.substring(hashIndex, spaceIndex));
+            hashIndex = post.indexOf("#", spaceIndex); // look for nxt # from space index
 
+        }
     }
 
 }

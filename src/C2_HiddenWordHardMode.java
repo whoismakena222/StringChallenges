@@ -29,6 +29,11 @@ public class C2_HiddenWordHardMode {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 /* TODO: your code goes here */
+                int hiddenIndex = line.indexOf("*");
+                int endhiddenIndex = line.indexOf("~");
+                System.out.println("hidden lyrics: " + line.substring(hiddenIndex, endhiddenIndex));
+
+                System.out.println("song: American Requiem");
 
             }
             scanner.close();
